@@ -8,7 +8,7 @@ const createTask = async (req, res) => {
 
     if (!title) {
         const error = new Error('Title is missing.');
-        return res.status(403).json(error);
+        return res.status(422).json(error);
     }
 
     const newTask = {
@@ -54,7 +54,7 @@ const getTaskById = async (req, res) => {
 
     if (!id) {
         const error = new Error('Task id is missing.');
-        return res.status(403).json(error);
+        return res.status(422).json(error);
     }
 
     try {
@@ -71,7 +71,7 @@ const updateTask = async (req, res) => {
 
     if (!id) {
         const error = new Error('Task id is missing.');
-        return res.status(403).json(error);
+        return res.status(422).json(error);
     }
 
     try {
