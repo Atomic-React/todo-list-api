@@ -1,25 +1,25 @@
 # ⚛️ Atomic React - Todo list API
 
--   [⚛️ Atomic React - Todo list API](#️-atomic-react---todo-list-api)
-    -   [Setup](#setup)
-    -   [Docs](#docs)
-        -   [Task Model](#task-model)
-        -   [API Routes](#api-routes)
-            -   [Get tasks](#get-tasks)
-                -   [Retrieve all tasks](#retrieve-all-tasks)
-                -   [Filter tasks](#filter-tasks)
-                -   [Search tasks](#search-tasks)
-            -   [Count tasks](#count-tasks)
-            -   [Create Task](#create-task)
-            -   [Delete Task](#delete-task)
-            -   [Update Task](#update-task)
+- [⚛️ Atomic React - Todo list API](#️-atomic-react---todo-list-api)
+	- [Setup](#setup)
+	- [Docs](#docs)
+		- [Task Model](#task-model)
+		- [API Routes](#api-routes)
+			- [Get tasks](#get-tasks)
+				- [Retrieve all tasks](#retrieve-all-tasks)
+				- [Filter tasks](#filter-tasks)
+				- [Search tasks](#search-tasks)
+			- [Count tasks](#count-tasks)
+			- [Create Task](#create-task)
+			- [Delete Task](#delete-task)
+			- [Update Task](#update-task)
 
 ## Setup
 
 Clone the repository:
 
 ```bash
-git clone <>
+git clone git@github.com:Atomic-React/todo-list-api.git
 ```
 
 Enter the directory:
