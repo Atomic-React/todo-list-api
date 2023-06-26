@@ -23,7 +23,7 @@ const createTask = async (req, res) => {
 
     } catch (error) {
         console.error(error);
-        res.status(500).json(error);
+        res.status(500).json({ error: error.message });
     }
 };
 
@@ -44,7 +44,7 @@ const getTasks = async (req, res) => {
         res.status(200).json(tasks);
     } catch (error) {
         console.error(error);
-        res.status(500).json(error);
+        res.status(500).json({ error: error.message });
     }
 
 };
@@ -62,7 +62,7 @@ const getTaskById = async (req, res) => {
         res.status(200).json(task);
     } catch (error) {
         console.error(error);
-        res.status(500).json(error);
+        res.status(500).json({ error: error.message });
     }
 };
 
@@ -82,7 +82,7 @@ const updateTask = async (req, res) => {
         });
         res.status(200).json(updatedTask);
     } catch (error) {
-        res.status(500).json(error);
+        res.status(500).json({ error: error.message });
     }
 };
 
@@ -96,7 +96,7 @@ const deleteTask = async (req, res) => {
         });
         res.status(200).json(deletedTask);
     } catch (error) {
-        res.status(500).json(error);
+        res.status(500).json({ error: error.message });
     }
 };
 
@@ -114,7 +114,7 @@ const getTasksCounts = async (req, res) => {
             allTasksCount: todoTasks.count + completedTasks.count,
         });
     } catch (error) {
-        res.status(500).json(error);
+        res.status(500).json({ error: error.message });
     }
 };
 
