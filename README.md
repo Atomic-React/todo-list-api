@@ -1,18 +1,19 @@
 # ⚛️ Atomic React - Todo list API
 
-- [⚛️ Atomic React - Todo list API](#️-atomic-react---todo-list-api)
-	- [Setup](#setup)
-	- [Docs](#docs)
-		- [Task Model](#task-model)
-		- [API Routes](#api-routes)
-			- [Get tasks](#get-tasks)
-				- [Retrieve all tasks](#retrieve-all-tasks)
-				- [Filter tasks](#filter-tasks)
-				- [Search tasks](#search-tasks)
-			- [Count tasks](#count-tasks)
-			- [Create Task](#create-task)
-			- [Delete Task](#delete-task)
-			- [Update Task](#update-task)
+-   [⚛️ Atomic React - Todo list API](#️-atomic-react---todo-list-api)
+    -   [Setup](#setup)
+    -   [Docs](#docs)
+        -   [Task Model](#task-model)
+        -   [API Routes](#api-routes)
+            -   [Get tasks](#get-tasks)
+                -   [Retrieve all tasks](#retrieve-all-tasks)
+                -   [Filter tasks](#filter-tasks)
+                -   [Search tasks](#search-tasks)
+            -   [Get one task by id](#get-one-task-by-id)
+            -   [Count tasks](#count-tasks)
+            -   [Create Task](#create-task)
+            -   [Delete Task](#delete-task)
+            -   [Update Task](#update-task)
 
 ## Setup
 
@@ -228,6 +229,26 @@ Reponse:
         },
         // ...
     ]
+}
+```
+
+#### Get one task by id
+
+You can retrieve a single task with its `id` using the following request passing the `id` value as route paramter:
+
+```bash
+GET /tasks/:id
+```
+
+Reponse:
+
+```json
+{
+    "id": "cf838b78-8138-42e1-92d9-5474c4842e50",
+    "title": "New task!!!",
+    "isDone": false,
+    "createdAt": "2023-06-26T11:57:11.579Z",
+    "updatedAt": "2023-06-26T12:11:12.771Z"
 }
 ```
 

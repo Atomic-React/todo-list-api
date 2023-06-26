@@ -49,8 +49,31 @@ const getTasks = async (req, res) => {
 
 };
 
+const getTaskById = async (req, res) => {
+    const { id } = req.params;
+
+    if (!id) {
+        const error = new Error('Task id is missing.');
+        return res.status(403).json(error);
+    }
+
+    try {
+        const task = await TaskModel.findByPk(id);
+        res.status(200).json(task);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json(error);
+    }
+};
+
 const updateTask = async (req, res) => {
-    const { id, ...taskToUpdate } = req.body; 
+    const { id, ...taskToUpdate } = req.body;
+
+    if (!id) {
+        const error = new Error('Task id is missing.');
+        return res.status(403).json(error);
+    }
+
     try {
         const updatedTask = await TaskModel.update(taskToUpdate, {
             where: {
@@ -98,6 +121,7 @@ const getTasksCounts = async (req, res) => {
 module.exports = {
     createTask,
     getTasks,
+    getTaskById,
     updateTask,
     deleteTask,
     getTasksCounts,
