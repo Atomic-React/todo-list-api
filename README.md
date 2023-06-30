@@ -313,7 +313,7 @@ The following request needs at least the task `id` in the body for updating the 
 It returns the number of updated tasks (`1` is expected).
 
 ```bash
-PUT /tasks/:id
+PUT /tasks
 
 body: {
 	id: 'cf838b78-8138-42e1-92d9-5474c4842e50'
